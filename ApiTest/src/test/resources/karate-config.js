@@ -5,7 +5,8 @@ api:{
     baseUrl: "https://restful-booker.herokuapp.com"
     },
 path:{
-    createBooking: "/booking"
+    crudBooking: "/booking",
+    createToken: "/auth"
     }
 }
 }

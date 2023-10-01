@@ -1,0 +1,10 @@
+{
+  "firstname": "#string",
+  "lastname": "#string",
+  "totalprice": "#number",
+  "depositpaid": "#boolean",
+  "bookingdates": {
+    "checkin": "2017-02-19",
+    "checkout": "2020-06-28"
+  }
+}

@@ -2,29 +2,14 @@ Feature: Create booking on restful-booker
 
   Background:
     * url api.baseUrl
-    * path path.createBooking
-    * def pathCreateBooking = path.createBooking
+    * path path.crudBooking
     * header accept = "application/json"
-
+    * def rqBodyCreateBooking = read('classpath:karate/jsonbase/request/rq-body-create-booking.json')
 
 
   @CreateBookingSuccessful01
 Scenario: Create booking successful
-    Given request
-    """
-      {
-  "firstname" : "Jim",
-  "lastname" : "Brown",
-  "totalprice" : 111,
-  "depositpaid" : true,
-  "bookingdates" :
-    {
-    "checkin" : "2018-01-01",
-    "checkout" : "2019-01-01"
-    },
-  "additionalneeds" : "Breakfast"
-}
-    """
+    Given request rqBodyCreateBooking
     When method POST
     Then status 200
 
